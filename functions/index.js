@@ -2,9 +2,12 @@ const functions = require('firebase-functions')
 const express = require("express")
 const app = express();
 const booksRouter = require('./api/controllers/books_controller')
+const feesRouter = require('./api/controllers/fees_controller')
 
 app.use(express.json())
 app.use('/books', booksRouter)
+app.use('/fees', feesRouter)
+
 
 exports.api = functions.https.onRequest(app)
 

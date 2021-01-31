@@ -2,7 +2,7 @@ const db = require('./api/database')
 
 async function setupDatabase(req, res, next) {
     // To delete all the collections
-    const collections = ['users', 'books']
+    const collections = ['users', 'books', 'fees']
     collections.forEach(async (collection) => await deleteCollection(collection))
 
     // Add documents to the books collection
@@ -81,7 +81,50 @@ async function setupDatabase(req, res, next) {
                 price: 40.00,
                 image: 'assets/book_five.jpeg'
             }
+        ],
+        'fees',
+        [
+            {
+                monthFee: 'January',
+                date: '1/1/2021',
+                amount: "100.00",
+                feeStatus: 'PAID'
+            },
+            {
+                monthFee: 'Books x 5',
+                date: '1/1/2021',
+                amount: "60.00",
+                feeStatus: 'PAID'
+            },
+            {
+                monthFee: 'February',
+                date: '13/2/2021',
+                amount: "100.00",
+                feeStatus: 'PAID'
+            },
+            {
+                monthFee: 'March',
+                date: '15/3/2021',
+                amount: "100.00",
+                feeStatus: 'PAID'
+            },
+            {
+                monthFee: 'April',
+                date: '22/4/2021',
+                amount: "100.00",
+                feeStatus: 'PAID'
+            },
+            {
+                monthFee: 'May',
+                date: '13/5/2021',
+                amount: "100.00",
+                feeStatus: 'UNPAID'
+            }
         ]
+    )
+
+    addDocuments(
+
     )
 
     res.send('Setting Up Database.... Done ')

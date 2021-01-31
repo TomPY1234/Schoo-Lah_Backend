@@ -38,6 +38,9 @@
 ### Get the list of books
 GET {{baseUrl}}/books
 
+### Get the list of fees
+GET {{baseUrl}}/fees
+
 ###  Getting a quote for a given id
 GET {{baseUrl}}/books/H8102ae5M94LcNhBtuAx
 
@@ -51,6 +54,19 @@ Content-Type: application/json
     "price" : 25,
     "image": "assets/book_three.jpeg"
 }
+
+###  Add a new quote
+POST {{baseUrl}}/fees
+Content-Type: application/json
+
+{
+    
+ "monthFee": "January",
+    "date": "1/1/2021",
+    "amount": "100.00",
+    "feeStatus": "PAID"
+}
+
 
 ### Update a quote partly
 PATCH {{baseUrl}}/books/H8102ae5M94LcNhBtuAx
