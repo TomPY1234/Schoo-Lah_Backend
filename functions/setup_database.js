@@ -120,13 +120,30 @@ async function setupDatabase(req, res, next) {
                 amount: "100.00",
                 feeStatus: 'UNPAID'
             }
+        ],
+        'users',
+        [
+            {
+                username: 'ahmadaiman',
+                password: 'ahmad123',
+                name: 'Ahmad Aiman',
+                type: 'student',
+                year: 5,
+                school: 'SK Impian Emas',
+                phone: '0197542776',
+                email: 'ahmad.aiman@gmail.com'
+            },
+            {
+                username: 'nurain',
+                password: 'ain123',
+                name: 'Nur Ain',
+                type: 'teacher',
+                year: 0,
+                phone: '0175875565',
+                email: 'ainn765@gmail.com'
+            }
         ]
     )
-
-    addDocuments(
-
-    )
-
     res.send('Setting Up Database.... Done ')
 }
 
