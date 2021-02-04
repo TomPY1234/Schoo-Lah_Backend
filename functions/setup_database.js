@@ -211,6 +211,44 @@ async function setupDatabase(req, res, next) {
 
                 ]
             }
+        ],
+        'qr',
+        [
+            {
+                year: 5,
+                subject: 'Bahasa Melayu',
+                classTime: "2021-01-02 10:00 AM"
+            },
+            {
+                year: 5,
+                subject: 'Mathematics',
+                classTime: "2021–01–02 02:30 PM"
+            },
+            {
+                year: 5,
+                subject: 'Science',
+                classTime: "2021–01–08 10:00 AM"
+            },
+            {
+                year: 5,
+                subject: 'Bahasa Melayu',
+                classTime: "2021–01–09 10:00 AM"
+            },
+            {
+                year: 5,
+                subject: 'Mathematics',
+                classTime: "2021–01–09 02:30 PM"
+            },
+            {
+                year: 5,
+                subject: 'Science',
+                classTime: "2021–01–15 10:00 AM"
+            },
+            {
+                year: 5,
+                subject: 'Bahasa Melayu',
+                classTime: "2021–01–16 10:00 AM"
+            }
         ]
     )
     res.send('Setting Up Database.... Done ')

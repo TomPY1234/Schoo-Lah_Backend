@@ -13,10 +13,13 @@ GET {{baseUrl}}/fees
 ### Get the list of users
 GET {{baseUrl}}/users
 
-###  Getting a quote for a given id
+### Get the list of qr
+GET {{baseUrl}}/qr
+
+###  Getting a books for a given id
 GET {{baseUrl}}/books/H8102ae5M94LcNhBtuAx
 
-###  Add a new quote
+###  Add a new books
 POST {{baseUrl}}/books
 Content-Type: application/json
 
@@ -27,16 +30,41 @@ Content-Type: application/json
     "image": "assets/book_three.jpeg"
 }
 
+###  Add a new users
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "username": "nurain",
+                "password": "ain123",
+                "name": "Nur Ain",
+                "type": "teacher",
+                "year": 0,
+                "phone": "0175875565",
+                "email": "ainn765@gmail.com"
+}
+
 ###  Add a new fee
 POST {{baseUrl}}/fees
 Content-Type: application/json
 
 {
     
- "monthFee": "January",
-    "date": "1/1/2021",
+ "monthFee": "May",
+    "date": "13/5/2021",
     "amount": "100.00",
-    "feeStatus": "PAID"
+    "feeStatus": "UNPAID"
+}
+
+###  Add a new qr
+POST {{baseUrl}}/qr
+Content-Type: application/json
+
+{
+    
+   "year": 5,
+                "subject": "Bahasa Melayu",
+                "classTime": "2021–01–16 10:00 AM"
 }
 
 ###  Add a new todo
@@ -44,27 +72,23 @@ POST {{baseUrl}}/todos
 Content-Type: application/json
 
 {
-                "title": "Mathematics",
+                "title": "Bahasa Malaysia",
                 "items": [
                     {
-                        "title": "Quiz 1: Addition & Substraction",
+                        "title": "Mari Membaca",
                         "completed": true
                     },
                     {
-                        "title": "Exercise multiplication",
+                        "title": "Karangan: Aku Sebatang Pensel",
                         "completed": false
                     },
                     {
-                        "title": "Homework: Let's learn about money",
+                        "title": "Pemahaman tatabahasa",
                         "completed": true
                     },
                     {
-                        "title": "Test 1: Calculation of money",
-                        "completed": false
-                    },
-                    {
-                        "title": "Quiz 2: Fraction",
-                        "completed": false
+                        "title": "Karangan: Keluarga saya",
+                        "completed": true
                     }
 
                 ]
@@ -79,6 +103,14 @@ Content-Type: application/json
         "feeStatus": "UNPAID"
 }
 
+### Update a qr partly
+PATCH {{baseUrl}}/qr/ghkJ1PWw3XqhdmdDUkTf
+Content-Type: application/json
+
+{
+        "year": 2
+}
+
 ### Update a book partly
 PATCH {{baseUrl}}/books/TuXQxdH1swNFTeeFsUr1
 Content-Type: application/json
@@ -88,7 +120,7 @@ Content-Type: application/json
 }
 
 ### Update a user partly
-PATCH {{baseUrl}}/users/WXoN1hXRdrSwkaYKsB4q
+PATCH {{baseUrl}}/users/MHO6yltvwidyJ4TjfTNi
 Content-Type: application/json
 
 {
@@ -141,3 +173,6 @@ DELETE {{baseUrl}}/books/H8102ae5M94LcNhBtuAx
 
 ### Delete a todo
 DELETE {{baseUrl}}/todos/N53VillbPnmPASGu9lBT
+
+### Delete a qr
+DELETE {{baseUrl}}/qr/ghkJ1PWw3XqhdmdDUkTf
