@@ -48,13 +48,14 @@ Content-Type: application/json
 POST {{baseUrl}}/fees
 Content-Type: application/json
 
-{
-    
- "monthFee": "May",
-    "date": "13/5/2021",
-    "amount": "100.00",
-    "feeStatus": "UNPAID"
-}
+ 
+            {
+                "monthFee": "May",
+                "date": "13/5/2021",
+                "amount": "100.00",
+                "feeStatus": "UNPAID"
+            }
+            
 
 ###  Add a new qr
 POST {{baseUrl}}/qr
@@ -72,28 +73,23 @@ POST {{baseUrl}}/todos
 Content-Type: application/json
 
 {
-                "title": "Bahasa Malaysia",
+                "title": "Science",
                 "items": [
                     {
-                        "title": "Mari Membaca",
+                        "title": "Exercise 1: Human Body",
                         "completed": true
                     },
                     {
-                        "title": "Karangan: Aku Sebatang Pensel",
+                        "title": "Basic needs of human and plants",
                         "completed": false
                     },
                     {
-                        "title": "Pemahaman tatabahasa",
-                        "completed": true
-                    },
-                    {
-                        "title": "Karangan: Keluarga saya",
+                        "title": "Homework: Food Chain",
                         "completed": true
                     }
 
                 ]
-            
-}
+            }
 
 ### Update a fee partly
 PATCH {{baseUrl}}/fees/3rxmr5S8mb23NotFX9Vl
@@ -169,7 +165,7 @@ Content-Type: application/json
 }
 
 ### Delete a quote
-DELETE {{baseUrl}}/books/H8102ae5M94LcNhBtuAx
+DELETE {{baseUrl}}/fees/a6KKZ4e9OAXcU2Zqb408
 
 ### Delete a todo
 DELETE {{baseUrl}}/todos/N53VillbPnmPASGu9lBT
